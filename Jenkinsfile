@@ -22,7 +22,7 @@ pipeline{
         stage('Tag Step'){
             when{
                 expression{
-                    "GIT_TAG" != ""
+                    "GIT_TAG" != null
                 }
             }
             steps{
