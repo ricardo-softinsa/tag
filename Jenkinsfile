@@ -14,6 +14,7 @@ pipeline{
                 echo "Is there a tag?..."
                 script{
                     GIT_TAG = bat(returnStdout: true, script: "@git tag --contains").trim()
+                    echo "$GIT_TAG"
                 }
                 echo bat(returnStdout: true, script: 'set') 
             }
