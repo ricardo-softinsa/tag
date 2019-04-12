@@ -22,11 +22,11 @@ pipeline{
         stage('Tag Step'){
             when{
                 expression{
-                    "GIT_TAG" != null
+                    "GIT_TAG" != ""
                 }
             }
             steps{
-                echo "It entered Tag Stage..."
+                echo "It entered Tag Stage.."
             }
         }
     }
