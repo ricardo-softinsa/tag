@@ -13,9 +13,9 @@ pipeline{
             steps{
                 echo "Is there a tag?..."
                 script{
-                    GIT_TAG = bat(returnStdout: true, script: "@git tag --contains").trim()
+                    //GIT_TAG = bat(returnStdout: true, script: "@git tag --contains").trim()
                 }
-                echo sh(returnStdout: true, script: 'env') 
+                echo bat(returnStdout: true, script: 'set') 
             }
         }
         stage('Tag Step'){
