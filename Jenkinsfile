@@ -13,7 +13,7 @@ pipeline{
             steps{
                 echo "Is there a tag?..."
                 script{
-                    //GIT_TAG = bat(returnStdout: true, script: "@git tag --contains").trim()
+                    GIT_TAG = bat(returnStdout: true, script: "@git tag --contains").trim()
                 }
                 echo bat(returnStdout: true, script: 'set') 
             }
